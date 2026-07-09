@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Progress Measurement &amp; EVM — E-Book untuk Project Engineer, Planner &amp; PM | Molife Marketing</title>
+<meta name="description" content="E-book Project Progress Measurement &amp; Earned Value Management — panduan praktikal untuk Project Engineer, Planning Engineer, Scheduler dan Project Manager. Harga pelancaran RM69 (dari RM99)." />
+<meta name="theme-color" content="#123A6B" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23123A6B'/%3E%3Cpath d='M22 72 L40 40 L55 58 L78 26' stroke='%23C9992E' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-main">
+    <div class="wrap">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">Molife Marketing</span>
+        <span class="brand-sub">Pengedar rasmi &middot; Apex Business Solutions</span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#masalah">Masalah</a>
+        <a href="#kalkulator">Kalkulator SPI</a>
+        <a href="#kandungan">Kandungan</a>
+        <a href="#harga">Harga</a>
+        <a href="#faq">Soalan Lazim</a>
+      </nav>
+      <a href="https://toyyibpay.com/EVM" class="btn btn-primary btn-sm nav-cta">Beli — RM69</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="hero">
+  <div class="wrap hero-inner">
+    <span class="hero-eyebrow">Apex Business Solutions &middot; Modern Project Controls Series &middot; Vol. 03</span>
+    <h1 class="headline">Project dah 70% siap&hellip; tapi kenapa masih <em>delay?</em></h1>
+    <p class="hero-sub">Ramai Project Engineer, Planner dan Project Manager masih tertanya&#8209;tanya apa itu Progress Measurement sebenar &mdash; dan kenapa angka progress mereka tak tahan bila disoal oleh client.</p>
+    <div class="hero-ctas">
+      <a href="https://toyyibpay.com/EVM" class="btn btn-primary" id="cta-primary">Dapatkan E&#8209;Book &mdash; RM69</a>
+      <a href="#kandungan" class="btn btn-outline">Lihat Isi Kandungan</a>
+    </div>
+    <ul class="trust-row">
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>PDF Digital &middot; 17 Bab</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Primavera P6 &middot; MS Project &middot; Asta Powerproject</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contoh Oil &amp; Gas, Construction, Infrastructure</li>
+    </ul>
+
+    <div class="chart-card">
+      <div class="cap"><span>Rancangan vs Sebenar</span><span>% Progress</span></div>
+      <svg viewBox="0 0 480 260" role="img" aria-label="Graf menunjukkan jurang antara progress rancangan dan progress sebenar pada 70%">
+        <line x1="30" y1="16" x2="30" y2="220" stroke="var(--border)" stroke-width="1"/>
+        <line x1="30" y1="220" x2="450" y2="220" stroke="var(--border)" stroke-width="1"/>
+        <g stroke="var(--border)" stroke-width="1">
+          <line x1="30" y1="169" x2="450" y2="169"/>
+          <line x1="30" y1="118" x2="450" y2="118"/>
+          <line x1="30" y1="67" x2="450" y2="67"/>
+        </g>
+        <path class="draw-dashed" d="M30,220 C150,200 250,50 450,24" fill="none" stroke="var(--ink-faint)" stroke-width="2" stroke-dasharray="6 6"/>
+        <path class="draw delay" d="M30,220 C150,214 300,120 355,92" fill="none" stroke="var(--danger)" stroke-width="3"/>
+        <circle class="pulse" cx="355" cy="92" r="5" fill="var(--danger)"/>
+        <line x1="355" y1="92" x2="355" y2="50" stroke="var(--danger)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+        <text x="362" y="52" font-size="12" font-weight="600" fill="var(--danger)">70%</text>
+      </svg>
+      <ul class="legend-mini">
+        <li><span><i class="swatch dash"></i>Rancangan (Planned)</span></li>
+        <li><span><i class="swatch solid"></i>Sebenar (Actual)</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="masalah" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Masalah</span>
+      <h2>Familiar dengan masalah ni?</h2>
+      <p class="lead" style="margin-top:12px">Bukan salah anda. Ini masalah sistem &mdash; dan ia berulang di hampir setiap projek yang tak ada Progress Measurement System yang jelas.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon danger"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Progress ikut anggaran</h3>
+        <p>Dilaporkan berdasarkan anggaran &mdash; bukan bukti sebenar di lapangan.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon danger"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>S&#8209;Curve tanpa analisis</h3>
+        <p>Dilukis cantik, tapi tiada sebarang analisis varians di sebaliknya.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon danger"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Percent Complete tak konsisten</h3>
+        <p>Berbeza antara disiplin dan laporan &mdash; angka jadi tidak boleh dipercayai.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon danger"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Laporan cantik, tak membantu</h3>
+        <p>Kelihatan profesional, tetapi tidak membantu sebarang keputusan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kalkulator" class="section section-soft reveal">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 40px;text-align:center">
+      <span class="eyebrow">Cuba sendiri</span>
+      <h2>Berapa SPI projek anda sekarang?</h2>
+      <p class="lead" style="margin:12px auto 0">Masukkan progress rancangan dan sebenar projek anda &mdash; lihat serta&#8209;merta jika anda berada di landasan.</p>
+    </div>
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="calc-field">
+          <label for="calc-planned">Progress Rancangan (Planned)</label>
+          <div class="input-wrap"><input type="number" id="calc-planned" min="0" max="100" value="70" /><span class="unit">%</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="calc-actual">Progress Sebenar (Actual)</label>
+          <div class="input-wrap"><input type="number" id="calc-actual" min="0" max="100" value="55" /><span class="unit">%</span></div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-spi">
+          <span class="num" id="calc-spi-value">0.00</span>
+          <span class="label">SPI<br>Schedule Performance Index</span>
+        </div>
+        <span class="calc-badge" id="calc-badge">&mdash;</span>
+      </div>
+      <p class="calc-note" id="calc-note"></p>
+    </div>
+  </div>
+</section>
+
+<section id="kandungan" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Kandungan</span>
+      <h2>Apa yang anda akan belajar</h2>
+      <p class="lead" style="margin-top:12px">13 komponen teras yang akan anda kuasai dalam e&#8209;book ini.</p>
+    </div>
+    <div class="check-grid">
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Progress Measurement System (PMS)</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Weighted Progress</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Physical Progress</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Rules of Credit</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Earned Value Management (EVM)</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>CPI &amp; SPI</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Forecasting EAC &amp; ETC</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Progress Curves</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>WBS Progress</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Engineering, Procurement &amp; Construction Progress</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Dashboard &amp; Reporting</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Common Mistakes dalam Progress Measurement</b></div>
+      <div class="check-item"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Contoh Sebenar Industri</b><span class="note">Oil &amp; Gas, Construction &amp; Infrastructure</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="struktur" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Struktur</span>
+      <h2>Struktur buku &mdash; 17 bab</h2>
+      <p class="lead" style="margin-top:12px">Empat bahagian, dari asas ke moden.</p>
+    </div>
+    <div class="accordion" id="accordion-struktur">
+      <div class="acc-item open">
+        <button class="acc-head" aria-expanded="true">
+          <span class="acc-title">Bahagian 1 &middot; Asas</span>
+          <span style="display:flex;align-items:center"><span class="acc-range">Bab 1&ndash;4</span><svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </button>
+        <div class="acc-body" style="max-height:120px">
+          <div class="acc-body-inner">Kitaran kawalan projek, kaedah pengukuran progress, dan cara membina sistem pemberat (weighting system) yang boleh dipertahankan.</div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Bahagian 2 &middot; Mekanik</span>
+          <span style="display:flex;align-items:center"><span class="acc-range">Bab 5&ndash;8</span><svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">Implementasi weighted progress dalam Primavera P6, Earned Value Management dengan contoh dikira penuh, analisis S&#8209;curve, dan rules of credit standard industri.</div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Bahagian 3 &middot; Aplikasi Fasa</span>
+          <span style="display:flex;align-items:center"><span class="acc-range">Bab 9&ndash;12</span><svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">Aplikasi kepada setiap fasa projek &mdash; Engineering, Procurement dan Construction &mdash; berakhir dengan measurement matrix sedia guna.</div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Bahagian 4 &middot; Moden</span>
+          <span style="display:flex;align-items:center"><span class="acc-range">Bab 13&ndash;17</span><svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">Dashboard Power BI, aplikasi AI dalam progress tracking, governance gaya EPC/owner, kajian kes sebenar, dan template library yang disertakan bersama buku.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="untuk-siapa" class="section section-soft reveal">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:24px">
+      <span class="eyebrow">Untuk siapa</span>
+      <h2>Sesuai untuk siapa</h2>
+    </div>
+    <ul class="tag-cloud">
+      <li class="tag hot">Project Engineer</li>
+      <li class="tag hot">Planning Engineer</li>
+      <li class="tag hot">Scheduler</li>
+      <li class="tag hot">Project Manager</li>
+      <li class="tag">Construction Manager</li>
+      <li class="tag">Project Controls Engineer</li>
+      <li class="tag">EPC Contractor</li>
+      <li class="tag">Consultant</li>
+      <li class="tag">Universiti &amp; Pelajar</li>
+    </ul>
+  </div>
+</section>
+
+<section id="legenda" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ciri&#8209;ciri</span>
+      <h2>Apa yang buat buku ini berbeza</h2>
+      <p class="lead" style="margin-top:12px">Sepanjang buku, empat jenis nota berulang untuk bantu anda belajar dengan cepat.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon accent"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2v3M10 15v3M4 10H2M18 10h-2M5 5l1.5 1.5M15 5l-1.5 1.5M5 15l1.5-1.5M15 15l-1.5-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h3>Apex Tips</h3>
+        <p>Nasihat praktikal terus dari pengalaman lapangan.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon danger"><svg viewBox="0 0 20 20" fill="none"><path d="M10 3l8 14H2L10 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Common Mistakes</h3>
+        <p>Kesilapan yang perlu dielakkan &mdash; dan kenapa ia berlaku.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon accent"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2l2.2 4.6 5 .7-3.6 3.6.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.6 5-.7L10 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+        <h3>Industry Best Practice</h3>
+        <p>Standard profesional yang diguna pakai industri.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon accent"><svg viewBox="0 0 20 20" fill="none"><rect x="4" y="5" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="9.5" r="1" fill="currentColor"/><circle cx="12.5" cy="9.5" r="1" fill="currentColor"/><path d="M7 13h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>AI Insight</h3>
+        <p>Di mana teknologi AI benar&#8209;benar membantu progress tracking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="harga" class="section section-soft reveal">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 40px;text-align:center">
+      <span class="eyebrow">Harga</span>
+      <h2>Satu harga, semua kandungan</h2>
+    </div>
+    <div class="pricing-card">
+      <span class="pricing-badge">Harga Pelancaran</span>
+      <div class="price-row"><span class="price-old">RM99</span><span class="price-new">RM69</span></div>
+      <p class="price-note">E&#8209;Book PDF Digital &middot; Vol. 03 &middot; 17 Bab</p>
+      <div class="countdown" id="countdown">
+        <div><span class="num" id="cd-d">00</span><div class="lbl">Hari</div></div>
+        <div><span class="num" id="cd-h">00</span><div class="lbl">Jam</div></div>
+        <div><span class="num" id="cd-m">00</span><div class="lbl">Minit</div></div>
+        <div><span class="num" id="cd-s">00</span><div class="lbl">Saat</div></div>
+      </div>
+      <ul class="pricing-list">
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Format PDF digital</li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Boleh dibaca di semua peranti</li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sesuai untuk semua platform jadual</li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contoh industri sebenar</li>
+      </ul>
+      <a href="https://toyyibpay.com/EVM" class="btn btn-primary btn-block">Order Sekarang &mdash; RM69</a>
+      <p class="gateway-note">Pembayaran selamat melalui ToyyibPay &middot; papar sebagai &ldquo;MOLIFE MARKETING&rdquo; pada penyata bank anda</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Soalan Lazim</span>
+      <h2>Ada persoalan?</h2>
+    </div>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">E&#8209;book ni dalam bahasa apa?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">Kandungan penuh e&#8209;book dalam Bahasa Inggeris, ditulis untuk professional project controls antarabangsa. Landing page ini sahaja dalam Bahasa Malaysia.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Perlukan Primavera P6 untuk faham buku ni?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">Tidak. Prinsip yang diajar adalah platform&#8209;agnostic &mdash; sesuai untuk P6, Oracle Primavera Cloud, Microsoft Project, Asta Powerproject atau mana&#8209;mana tool jadual anda guna. P6 dijadikan rujukan sahaja bila langkah software ditunjukkan.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Format e&#8209;book macam mana?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">PDF digital, boleh dibaca di komputer, tablet atau telefon.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Macam mana saya terima e&#8209;book lepas order?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">Selepas pembayaran berjaya melalui ToyyibPay, anda akan dibawa terus ke halaman muat turun. Pautan yang sama turut dihantar ke email anda.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Ada harga kumpulan / universiti?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">Ada &mdash; WhatsApp <a href="https://wa.me/601111535800" target="_blank" rel="noopener" style="text-decoration:underline">011&#8209;1153 5800</a> atau emel <a href="mailto:molifemarketing@gmail.com" style="text-decoration:underline">molifemarketing@gmail.com</a> untuk harga kumpulan/bulk.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false">
+          <span class="acc-title">Kenapa &ldquo;Molife Marketing&rdquo; pada resit/penyata bank saya?</span>
+          <svg class="acc-chevron" viewBox="0 0 12 12"><path d="M6 1 V11 M1 6 H11" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-body-inner">Molife Marketing ialah pengedar rasmi yang memproses pembayaran e&#8209;book ini melalui ToyyibPay. E&#8209;book itu sendiri ditulis dan diterbitkan oleh Apex Business Solutions.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">Molife Marketing</span>
+        <p>Pengedar rasmi e&#8209;book <em>Project Progress Measurement &amp; EVM</em>, ditulis oleh Apex Business Solutions.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Laman</h4>
+          <ul>
+            <li><a href="#masalah">Masalah</a></li>
+            <li><a href="#kandungan">Kandungan</a></li>
+            <li><a href="#struktur">Struktur</a></li>
+            <li><a href="#harga">Harga</a></li>
+            <li><a href="#faq">Soalan Lazim</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hubungi</h4>
+          <ul>
+            <li><a href="https://wa.me/601111535800" target="_blank" rel="noopener">WhatsApp 011&#8209;1153 5800</a></li>
+            <li><a href="mailto:molifemarketing@gmail.com">molifemarketing@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Dijual &amp; diedarkan oleh Molife Marketing.</span>
+      <span>E&#8209;book &copy; 2026 Apex Business Solutions. Hak cipta terpelihara.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="sticky-cta">
+  <span class="price"><s>RM99</s> RM69</span>
+  <a href="https://toyyibpay.com/EVM" class="btn btn-primary btn-sm">Order Sekarang</a>
+</div>
+
+<script>
+(function(){
+  var sticky = document.getElementById('sticky-cta');
+  function onScroll(){
+    if (window.scrollY > 500) sticky.classList.add('show'); else sticky.classList.remove('show');
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target);} });
+    }, {threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  function bindAccordion(root, exclusive){
+    var items = root.querySelectorAll('.acc-item');
+    items.forEach(function(item){
+      var head = item.querySelector('.acc-head');
+      var body = item.querySelector('.acc-body');
+      head.addEventListener('click', function(){
+        var isOpen = item.classList.contains('open');
+        if (exclusive){
+          items.forEach(function(i){
+            i.classList.remove('open');
+            i.querySelector('.acc-head').setAttribute('aria-expanded','false');
+            i.querySelector('.acc-body').style.maxHeight = null;
+          });
+        }
+        if (!isOpen){
+          item.classList.add('open');
+          head.setAttribute('aria-expanded','true');
+          body.style.maxHeight = body.scrollHeight + 'px';
+        } else {
+          item.classList.remove('open');
+          head.setAttribute('aria-expanded','false');
+          body.style.maxHeight = null;
+        }
+      });
+    });
+  }
+  document.querySelectorAll('.accordion').forEach(function(acc){ bindAccordion(acc, acc.id === 'accordion-struktur' ? false : true); });
+
+  var target = new Date('2026-07-16T23:59:59+08:00').getTime();
+  function tick(){
+    var now = Date.now();
+    var diff = Math.max(0, target - now);
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor(diff % 86400000 / 3600000);
+    var m = Math.floor(diff % 3600000 / 60000);
+    var s = Math.floor(diff % 60000 / 1000);
+    var pad = function(n){ return String(n).padStart(2,'0'); };
+    document.getElementById('cd-d').textContent = pad(d);
+    document.getElementById('cd-h').textContent = pad(h);
+    document.getElementById('cd-m').textContent = pad(m);
+    document.getElementById('cd-s').textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  var plannedInput = document.getElementById('calc-planned');
+  var actualInput = document.getElementById('calc-actual');
+  var spiValue = document.getElementById('calc-spi-value');
+  var badge = document.getElementById('calc-badge');
+  var note = document.getElementById('calc-note');
+  function clamp(n){ return Math.min(100, Math.max(0, isNaN(n) ? 0 : n)); }
+  function updateCalc(){
+    var planned = clamp(parseFloat(plannedInput.value));
+    var actual = clamp(parseFloat(actualInput.value));
+    var spi = planned > 0 ? (actual / planned) : 0;
+    spiValue.textContent = spi.toFixed(2);
+    badge.className = 'calc-badge';
+    if (spi >= 1){
+      badge.classList.add('good');
+      badge.textContent = 'On Track / Mendahului';
+      note.textContent = 'SPI 1.00 ke atas bermakna projek anda menyamai atau mendahului jadual. Kekalkan momentum ini.';
+    } else if (spi >= 0.9){
+      badge.classList.add('warn');
+      badge.textContent = 'Sedikit Ketinggalan';
+      note.textContent = 'SPI antara 0.90–0.99 bermakna sedikit ketinggalan — masih boleh dipulihkan dengan recovery plan yang betul.';
+    } else {
+      badge.classList.add('bad');
+      badge.textContent = 'Delay Ketara';
+      note.textContent = 'SPI di bawah 0.90 bermakna projek anda ketinggalan ketara berbanding jadual — bab EVM & Forecasting EAC/ETC dalam e-book ini tunjukkan macam mana nak baiki ini.';
+    }
+  }
+  plannedInput.addEventListener('input', updateCalc);
+  actualInput.addEventListener('input', updateCalc);
+  updateCalc();
+})();
+</script>
+</body>
+</html>

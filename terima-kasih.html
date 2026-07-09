@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pembayaran Diterima — Muat Turun E-Book | Molife Marketing</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="theme-color" content="#123A6B" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23123A6B'/%3E%3Cpath d='M22 72 L40 40 L55 58 L78 26' stroke='%23C9992E' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-main">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">Molife Marketing</span>
+        <span class="brand-sub">Pengedar rasmi &middot; Apex Business Solutions</span>
+      </a>
+      <a href="index.html" class="btn btn-outline btn-sm">&larr; Laman Utama</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="status-hero">
+  <div class="wrap">
+    <div id="state-success">
+      <div class="status-icon success"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h1 class="headline" style="font-size:clamp(28px,4.2vw,40px);margin-bottom:14px">Terima kasih. Pembayaran anda berjaya.</h1>
+      <p class="hero-sub" style="margin:0 auto">E&#8209;book <em>Project Progress Measurement &amp; Earned Value Management</em> sedia untuk dimuat turun di bawah. Pautan yang sama turut dihantar ke email anda oleh ToyyibPay.</p>
+    </div>
+
+    <div id="state-fail" style="display:none">
+      <div class="status-icon fail"><svg viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+      <h1 class="headline" style="font-size:clamp(28px,4.2vw,40px);margin-bottom:14px">Pembayaran belum selesai.</h1>
+      <p class="hero-sub" style="margin:0 auto">Transaksi anda tidak berjaya atau dibatalkan. Tiada jumlah telah ditolak jika status menunjukkan gagal. Sila cuba sekali lagi.</p>
+    </div>
+
+    <div class="order-card" id="order-table" style="display:none">
+      <div class="order-row" id="row-order-id" style="display:none"><span class="k">Order ID</span><span class="v" id="v-order-id"></span></div>
+      <div class="order-row" id="row-billcode" style="display:none"><span class="k">Billcode</span><span class="v" id="v-billcode"></span></div>
+      <div class="order-row" id="row-transaction" style="display:none"><span class="k">Transaction ID</span><span class="v" id="v-transaction"></span></div>
+      <div class="order-row" id="row-status" style="display:none"><span class="k">Status</span><span class="v" id="v-status"></span></div>
+    </div>
+
+    <div id="download-block">
+      <div class="download-box">
+        <div>
+          <b style="display:block;font-size:15.5px;margin-bottom:4px">Project Progress Measurement &amp; EVM.pdf</b>
+          <span class="fname">PDF Digital &middot; Modern Project Controls Series, Vol. 03 &middot; 17 Bab</span>
+        </div>
+        <a href="assets/Progress-Measurement-EVM-Guide-Apex-2026.pdf" download class="btn btn-primary">Muat Turun E&#8209;Book</a>
+      </div>
+      <p class="support-note">Simpan salinan e&#8209;book ini di peranti anda. Jika pautan muat turun tidak berfungsi, WhatsApp <a href="https://wa.me/601111535800" target="_blank" rel="noopener">011&#8209;1153 5800</a> atau emel <a href="mailto:molifemarketing@gmail.com">molifemarketing@gmail.com</a> dengan resit pembayaran anda.</p>
+      <p class="support-note" style="margin-top:10px">Pautan tak keluar? Salinan sandaran di <a href="https://drive.google.com/drive/u/0/folders/1Qkt8gLkhxoUFuu0Xzl1FkinsDRuWsXbj" target="_blank" rel="noopener">Google Drive</a>.</p>
+    </div>
+
+    <div id="retry-block" style="display:none">
+      <a href="https://toyyibpay.com/EVM" class="btn btn-primary">Cuba Bayar Semula &mdash; RM69</a>
+      <p class="support-note" style="margin-top:16px">Masalah berulang? WhatsApp <a href="https://wa.me/601111535800" target="_blank" rel="noopener">011&#8209;1153 5800</a> atau emel <a href="mailto:molifemarketing@gmail.com">molifemarketing@gmail.com</a> untuk bantuan.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>Dijual &amp; diedarkan oleh Molife Marketing.</span>
+      <span>E&#8209;book &copy; 2026 Apex Business Solutions. Hak cipta terpelihara.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var statusId = params.get('status_id');
+  var billcode = params.get('billcode');
+  var orderId = params.get('order_id');
+  var txnId = params.get('transaction_id');
+
+  function setRow(rowId, valId, value){
+    if(!value) return;
+    document.getElementById(rowId).style.display = 'grid';
+    document.getElementById(valId).textContent = value;
+  }
+  if (orderId || billcode || txnId || statusId){
+    document.getElementById('order-table').style.display = 'block';
+    setRow('row-order-id','v-order-id', orderId);
+    setRow('row-billcode','v-billcode', billcode);
+    setRow('row-transaction','v-transaction', txnId);
+    if (statusId){
+      var label = statusId === '1' ? 'Berjaya' : (statusId === '2' ? 'Belum Selesai / Pending' : 'Gagal');
+      setRow('row-status','v-status', label + ' (status_id=' + statusId + ')');
+    }
+  }
+
+  var failed = statusId && statusId !== '1';
+  if (failed){
+    document.getElementById('state-success').style.display = 'none';
+    document.getElementById('state-fail').style.display = 'block';
+    document.getElementById('download-block').style.display = 'none';
+    document.getElementById('retry-block').style.display = 'block';
+  }
+})();
+</script>
+</body>
+</html>
