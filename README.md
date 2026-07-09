@@ -4,58 +4,63 @@ Landing page statik (HTML/CSS/JS tanpa framework) untuk e-book
 *Project Progress Measurement & Earned Value Management* — ditulis oleh Apex Business Solutions,
 dijual & diedarkan oleh **Molife Marketing** (akaun ToyyibPay).
 
+**Live:** https://apexebook-evm.netlify.app
+**Repo:** https://github.com/halidasina/apexebook-evm
+**Bill ToyyibPay:** https://toyyibpay.com/EVM
+
 Ada 2 halaman:
 - `index.html` — landing page utama (butang beli terus ke ToyyibPay: `https://toyyibpay.com/EVM`)
-- `terima-kasih.html` — halaman selepas bayar, ada butang muat turun e-book terus
+- `terima-kasih.html` — halaman selepas bayar, ada butang muat turun e-book terus (self-hosted PDF + backup link Google Drive)
 
-## Sebelum deploy — kena tukar dulu
+## Setup ToyyibPay (kena buat sekali sahaja)
 
-1. **Tarikh countdown "Harga Pelancaran".** Dalam `index.html`, cari:
-   `new Date('2026-07-16T23:59:59+08:00')` — tukar ke tarikh tamat promosi sebenar.
-2. **Return URL kat ToyyibPay** (kalau ada field tu dalam borang create bill) — set ke:
-   `https://<site-anda>.netlify.app/terima-kasih.html`
+1. **Return URL** — dalam borang bill ToyyibPay (kalau ada field tu), set ke:
+   `https://apexebook-evm.netlify.app/terima-kasih.html`
    ToyyibPay akan redirect customer terus ke situ lepas bayar, dengan `status_id`, `billcode`,
-   `order_id`, `transaction_id` sebagai query param — page tu dah handle both success/fail state.
-3. Anda tak boleh dapat URL Netlify sebenar sehingga dah deploy (langkah bawah) — deploy dulu,
-   baru copy URL tu balik ke ToyyibPay.
+   `order_id`, `transaction_id` sebagai query param — page tu dah handle both success/fail state secara automatik.
 
-## Deploy ke GitHub + Netlify
+2. **Kalau tiada field Return URL** (ToyyibPay bagi "small box" untuk teks lepas bayar sahaja) —
+   copy-paste teks ni ke dalam box tersebut:
 
-### 1. Create repo di GitHub
-- Pergi ke github.com → New repository → bagi nama (contoh `evm-ebook-landing`) → Create.
-- Jangan tambah README/gitignore (folder ni dah ada fail).
+   ```
+   Terima kasih atas pembelian anda! Sila klik link di bawah untuk muat turun eBook anda:
+   https://apexebook-evm.netlify.app/terima-kasih.html
 
-### 2. Push fail ni ke repo
-Buka terminal dalam folder `evm-ebook-landing/` ni, run:
+   Sebarang masalah, WhatsApp kami: wa.me/601111535800
+   ```
+
+3. **Tarikh countdown "Harga Pelancaran"** dalam `index.html` set ke `2026-07-16T23:59:59+08:00`.
+   Tukar tarikh ni bila promosi nak dilanjutkan/tamat.
+
+## Redeploy lepas edit fail
 
 ```
-git init
+netlify deploy --prod --dir=.
+```
+
+(Site sudah linked ke project `apexebook-evm` di Netlify.) Atau push ke GitHub — kalau site
+disambung ke auto-deploy dari repo, cukup `git push`.
+
+```
 git add .
-git commit -m "Landing page: Progress Measurement & EVM e-book"
-git branch -M main
-git remote add origin https://github.com/<username>/<nama-repo>.git
-git push -u origin main
+git commit -m "update landing page"
+git push
 ```
 
-### 3. Connect ke Netlify
-- Log masuk netlify.com → **Add new site → Import an existing project**
-- Pilih GitHub → pilih repo yang baru push tadi
-- Build settings: **kosongkan Build command**, **Publish directory = `.`** (root)
-- Deploy site
+## ⚠️ Nota penting: fail PDF di repo ini PUBLIC
 
-Netlify akan bagi URL automatik (contoh `random-name-123.netlify.app`).
-Boleh tukar ke domain custom kemudian di **Site settings → Domain management**.
-
-### 4. Lengkapkan loop ToyyibPay
-- Copy URL Netlify anda.
-- Kembali ke borang bill ToyyibPay → isi **Return URL** (jika ada) dengan
-  `https://<url-netlify-anda>/terima-kasih.html`
-- Isi **Extra Email Content** dengan teks yang disediakan (rujuk mesej chat / bawah).
+`assets/Progress-Measurement-EVM-Guide-Apex-2026.pdf` disimpan terus dalam repo GitHub (public)
+dan site Netlify. Ini bermakna sesiapa yang jumpa URL fail terus (contohnya dari GitHub atau
+inspect network tab) **boleh muat turun tanpa bayar** — tiada proteksi payment-gate sebenar pada
+static hosting macam ni. Ini risiko biasa untuk seller kecil guna static site + ToyyibPay,
+tapi elok tahu had ini. Kalau nak proteksi lebih ketat kemudian (contohnya link sekali-guna atau
+emel automatik lepas bayar), boleh upgrade ke Netlify Function / email automation — bukan
+keperluan sekarang.
 
 ## Struktur fail
 
 - `index.html` — landing page
 - `terima-kasih.html` — halaman lepas bayar + muat turun e-book
-- `style.css` — semua styling dikongsi oleh kedua-dua halaman
+- `style.css` — semua styling dikongsi oleh kedua-dua halaman (tema navy + gold)
 - `netlify.toml` — konfigurasi deploy Netlify
 - `assets/Progress-Measurement-EVM-Guide-Apex-2026.pdf` — fail e-book sebenar yang dimuat turun customer
